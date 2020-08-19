@@ -1,0 +1,20 @@
+{
+  "name": "tiny-html-builder",
+  "version": "1.0.0",
+  "description": "Tiny helper for creating html fragments written in typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hecs/tiny-html-builder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hecs/tiny-html-builder/issues"
+  },
+  "homepage": "https://github.com/hecs/tiny-html-builder#readme",
+  "dependencies": {}
+}
