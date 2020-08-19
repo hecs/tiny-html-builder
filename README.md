@@ -6,11 +6,11 @@ It's
 - Fast
 - Extremely small. Under 200 bytes minified (without gzip)
 
-__Example__
+__Usage__
 ```typescript
 
-
 // 1. Create shorthand-functions for the tags that you want to use, and forward the arguments that is relevant the tag in question
+import { tag } from 'tiny-html-builder';
 
 const div = (style: string, children?: ElementOrText) => tag('div', style, children);
 const p = (style?: string, children?: ElementOrText) => tag('p', style, children);
@@ -26,7 +26,6 @@ div("display:flex", [
 ]);
 
 // Returns: A html fragment
-
 ```
 
 __Limitations__
