@@ -6,13 +6,13 @@ __Example__
 ```typescript
 
 
-// 1. Create shorthand functions for tag for your elements:
+// 1. Create shorthand-functions for the tags that you want to use, and forward the arguments that is relevant the tag in question
 
 const div = (style: string, children?: ElementOrText) => tag('div', style, children);
 const p = (style?: string, children?: ElementOrText) => tag('p', style, children);
-const bold() = (children?: ElementOrText) => tag('b', children);
+const bold = (children?: ElementOrText) => tag('b', children);
 
-// 2. Usage
+// 2. Use your shorthand functions
 
 div("display:flex", [
     div('my-class-name'), 
