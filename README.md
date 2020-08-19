@@ -10,15 +10,15 @@ __Usage__
 ```typescript
 
 // 1. Create shorthand-functions for the tags that you want to use, and forward the arguments that is relevant the tag in question
-import { tag } from 'tiny-html-builder';
+import { tag, ElementsOrText } from 'tiny-html-builder';
 
-const div = (style: string, children?: ElementOrText) => tag('div', style, children);
-const p = (style?: string, children?: ElementOrText) => tag('p', style, children);
-const bold = (children?: ElementOrText) => tag('b', children);
+const div = (style: string, children?: ElementsOrText) => tag('div', style, children);
+const p = (children?: ElementsOrText) => tag('p', undefined, children);
+const b = (text: string) => tag('b', undefined, text);
 
 // 2. Use your shorthand functions
 
-div("display:flex", [
+const fragment = div("display:flex", [
     div('my-class-name'), 
     p(
         b('This is an example')
