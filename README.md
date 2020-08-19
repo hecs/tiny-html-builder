@@ -1,6 +1,10 @@
 # tiny-html-builder
 
-Tiny helper for creating html fragments written in typescript
+Tiny helper for creating html elements, written in typescript.
+
+It's
+- Fast
+- Extremely small. Under 200 bytes minified (without gzip)
 
 __Example__
 ```typescript
@@ -21,5 +25,9 @@ div("display:flex", [
     )
 ]);
 
+// Returns: A html fragment
+
 ```
 
+__Limitations__
+This is not in any way a replacement for react/angular/vue etc. It does not have support for data binding, event binding etc. That you'll need to solve separately.
