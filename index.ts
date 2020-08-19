@@ -1,4 +1,4 @@
-type ElementsOrText = HTMLElement | HTMLElement[] | string;
+export type ElementsOrText = HTMLElement | HTMLElement[] | string;
 
 export function tag(tagName: string, style: string = '', children?: ElementsOrText) {
   const el = document.createElement(tagName);
