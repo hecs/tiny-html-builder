@@ -1,6 +1,6 @@
 {
   "name": "tiny-html-builder",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Tiny helper for creating html fragments written in typescript",
   "main": "index.js",
   "scripts": {
@@ -16,5 +16,5 @@
     "url": "https://github.com/hecs/tiny-html-builder/issues"
   },
   "homepage": "https://github.com/hecs/tiny-html-builder#readme",
-  "dependencies": {}
+  "keywords": ["typescript", "dom", "html"]
 }
