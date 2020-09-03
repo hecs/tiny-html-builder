@@ -1,20 +1,30 @@
 {
-  "name": "tiny-html-builder",
-  "version": "1.0.3",
-  "description": "Tiny helper for creating html fragments written in typescript",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hecs/tiny-html-builder.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/hecs/tiny-html-builder/issues"
-  },
-  "homepage": "https://github.com/hecs/tiny-html-builder#readme",
-  "keywords": ["typescript", "dom", "html"]
+    "name": "tiny-html-builder",
+    "version": "1.0.3",
+    "description": "Tiny helper for creating html fragments written in typescript",
+    "main": "index.js",
+    "scripts": {
+        "start": "parcel example.html"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/hecs/tiny-html-builder.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/hecs/tiny-html-builder/issues"
+    },
+    "homepage": "https://github.com/hecs/tiny-html-builder#readme",
+    "keywords": [
+        "typescript",
+        "dom",
+        "html"
+    ],
+    "devDependencies": {
+        "typescript": "^4.0.2"
+    },
+    "dependencies": {
+        "parcel": "^1.12.4"
+    }
 }
