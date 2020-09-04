@@ -16,11 +16,11 @@ const app = div("x-app-root", [
   div("display: flex", [
     h1("This is my heading"),
     ...click(
-      event => console.log('click button1', event),
+      console.info,
       button('my button')
     ),
     ...click(
-      event => console.log('click button2', event),
+      console.log,
       [
         button('my button'),
         "Text here is not affected by click"
