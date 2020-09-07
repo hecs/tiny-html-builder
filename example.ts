@@ -1,29 +1,30 @@
+import { header } from './example-header';
 import { tag, event } from './index'
 
 // Tag shorthands
 const div = (...args) => tag('div', ...args);
-const header = children => tag("header", null, children);
 const footer = children => tag("footer", null, children);
 const h1 = text => tag("h1", null, text);
 const button = text => tag('button', null, text);
 
 // Event shorthands
 const click = (callback, children) => event('click', callback, children)
+const mouseover = (callback, children) => event('mouseover', callback, children)
 
 // App code
 const app = div("x-app-root", [
-  header('HeadeR'),
-  div("display: flex", [
+  header(),
+  div("display: flex; flex-direction: column;", [
     h1("This is my heading"),
-    ...click(
+    ...mouseover(
       console.info,
       button('my button')
     ),
     ...click(
       console.log,
       [
-        button('my button'),
-        "Text here is not affected by click"
+        "Text here is not affected by click",
+        button('my button')
       ]
     )
   ]),
