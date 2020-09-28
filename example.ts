@@ -8,8 +8,8 @@ const h1 = text => tag("h1", null, text);
 const button = text => tag('button', null, text);
 
 // Event shorthands
-const click = (callback, children) => event('click', callback, children)
-const mouseover = (callback, children) => event('mouseover', callback, children)
+const click = (callback, children) => event('click', callback, children);
+const mouseover = (callback, children) => event('mouseover', callback, children);
 
 // App code
 const app = div("x-app-root", [
@@ -24,6 +24,7 @@ const app = div("x-app-root", [
       console.log,
       [
         "Text here is not affected by click",
+        div(null, 0),
         button('my button')
       ]
     )
