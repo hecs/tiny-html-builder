@@ -1,1 +1,1 @@
-export { tag, event } from './lib/tag';
+export { tag, event } from './dist/tag';

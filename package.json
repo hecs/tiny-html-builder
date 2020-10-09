@@ -2,9 +2,14 @@
     "name": "tiny-html-builder",
     "version": "1.1.0",
     "description": "Tiny helper for creating html fragments written in typescript",
-    "main": "index.js",
+    "main": "dist/tag.ts",
+    "source": "lib/tag.ts",
+    "module": "dist/tag.module.js",
+    "types": "dist/tag.d.ts",
+    "unpkg": "dist/tag.umd.js",
     "scripts": {
-        "start": "parcel example.html"
+        "start": "parcel example.html",
+        "build": "microbundle"
     },
     "repository": {
         "type": "git",
@@ -22,6 +27,7 @@
         "html"
     ],
     "devDependencies": {
+        "microbundle": "^0.12.4",
         "typescript": "^4.0.2"
     },
     "dependencies": {

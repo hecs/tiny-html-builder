@@ -1,0 +1,2 @@
+var e=Array.isArray,n=function(n,t,r){void 0===t&&(t="");var u=document.createElement(n);return t&&(t.includes(":")?u.setAttribute("style",t):u.className=t),u.append.apply(u,(e(r)?r:[r]).filter(function(e){return null!=e})),u},t=function(n,t,r){return(r=e(r)?r:[r]).filter(function(e){return e instanceof HTMLElement}).forEach(function(e){return e.addEventListener(n,t)}),r};export{t as event,n as tag};
+//# sourceMappingURL=tag.module.js.map
