@@ -1,5 +1,5 @@
 import { header } from './example-header';
-import { tag, event } from './index'
+import { tag, event } from './lib/tag'
 
 // Tag shorthands
 const div = (...args) => tag('div', ...args);

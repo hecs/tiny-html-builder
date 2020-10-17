@@ -1,3 +1,6 @@
 {
-    "compilerOptions": { "declaration": true }
+    "compilerOptions": {
+        "declaration": true,
+        "lib": ["ES2019", "DOM"]
+    }
 }

@@ -1,2 +1,2 @@
-const{isArray:e}=Array,t=(t,n="",r)=>{const s=document.createElement(t);return n&&(n.includes(":")?s.setAttribute("style",n):s.className=n),s.append(...(e(r)?r:[r]).filter(e=>null!=e)),s},n=(t,n,r)=>((r=e(r)?r:[r]).filter(e=>e instanceof HTMLElement).forEach(e=>e.addEventListener(t,n)),r);export{n as event,t as tag};
+const e=(e,t="",n)=>{const l=document.createElement(e);return(null==t?void 0:t.includes(":"))?l.setAttribute("style",t):l.className=t,l.append(...[n].flat().filter(e=>null!=e)),l},t=(e,t,n)=>{const l=[n].flat();return l.filter(e=>e instanceof HTMLElement).forEach(n=>n.addEventListener(e,t)),l};export{t as event,e as tag};
 //# sourceMappingURL=tag.modern.js.map
