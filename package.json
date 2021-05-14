@@ -1,6 +1,6 @@
 {
     "name": "tiny-html-builder",
-    "version": "1.3.0",
+    "version": "1.4.0",
     "description": "Tiny helper for creating html fragments written in typescript",
     "main": "dist/tag.ts",
     "source": "lib/tag.ts",
