@@ -1,21 +1,21 @@
-type ElementOrList = HTMLElement | HTMLElement[];
-type ElementOrString = HTMLElement | string;
-type ElementOrListOrString = ElementOrList | string;
+export type AttrsClassesStyles = string | { [key: string]: string };
 
-const tag = (tagName: string, style: string = '', children?: ElementOrListOrString) => {
+const toFlatArray = (children): HTMLElement[] => Array.isArray(children) ? children.flat(Infinity) : [children];
+
+const tag = <T>(tagName: string, config: AttrsClassesStyles = {}, children?: T): HTMLElement => {
     const el = document.createElement(tagName);
-    style?.includes(':') ? el.setAttribute('style', style) : el.className = style;
-    el.append(...[children].flat().filter(x => x != null));
+    if (typeof config === 'string') {
+        config?.includes(':') ? el.setAttribute('style', config) : el.className = config;
+    } else {
+        Object.entries(config).forEach(([key, value]) => el.setAttribute(key, value));
+    }
+    el.append(...toFlatArray(children).filter(c => c));
     return el;
 }
 
-//@ts-ignore "event" is depricated in lib.d.ts in typescript. 
-const event = (eventName: string, callback: EventListener | EventListenerObject, children: ElementOrListOrString): ElementOrString[] => {
-    const childrenArray = [children].flat();
-    for (const c of childrenArray)
-        if (c instanceof HTMLElement)
-            c.addEventListener(eventName, callback);
-    return childrenArray;
+const event = <T>(eventName: string, callback: EventListener | EventListenerObject, children: T): T => {
+    toFlatArray(children).forEach(c => c instanceof HTMLElement && c.addEventListener(eventName, callback));
+    return children;
 }
 
 export { tag, event };
