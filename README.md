@@ -1,4 +1,6 @@
-# tiny-html-builder
+# OLD README: tiny-html-builder 1.4 (README for 2.0 is in the works)
+
+(examples are also for 1.4)
 
 Tiny helper for creating html fragments with event binding, written in typescript.
 

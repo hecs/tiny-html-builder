@@ -1,2 +1,0 @@
-var t=function(t){return Array.isArray(t)?t.flat(Infinity):[t]};exports.event=function(e,n,r){return t(r).forEach(function(t){return t instanceof HTMLElement&&t.addEventListener(e,n)}),r},exports.tag=function(e,n,r){void 0===n&&(n={});var i,u=document.createElement(e);return"string"==typeof n?null!=(i=n)&&i.includes(":")?u.setAttribute("style",n):u.className=n:Object.entries(n).forEach(function(t){return u.setAttribute(t[0],t[1])}),u.append.apply(u,t(r).filter(function(t){return t})),u};
-//# sourceMappingURL=tag.js.map
