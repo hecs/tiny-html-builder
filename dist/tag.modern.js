@@ -1,2 +1,2 @@
-const e=(e,t="",n)=>{const l=document.createElement(e);return(null==t?void 0:t.includes(":"))?l.setAttribute("style",t):l.className=t,l.append(...[n].flat().filter(e=>null!=e)),l},t=(e,t,n)=>{const l=[n].flat();return l.filter(e=>e instanceof HTMLElement).forEach(n=>n.addEventListener(e,t)),l};export{t as event,e as tag};
+const t=t=>Array.isArray(t)?t.flat(Infinity):[t],e=(e,n={},r)=>{const s=document.createElement(e);return"string"==typeof n?null!=n&&n.includes(":")?s.setAttribute("style",n):s.className=n:Object.entries(n).forEach(([t,e])=>s.setAttribute(t,e)),s.append(...t(r).filter(t=>t)),s},n=(e,n,r)=>(t(r).forEach(t=>t instanceof HTMLElement&&t.addEventListener(e,n)),r);export{n as event,e as tag};
 //# sourceMappingURL=tag.modern.js.map
