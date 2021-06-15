@@ -1,6 +1,6 @@
 export type AttrsClassesStyles = string | { [key: string]: string };
 
-const toFlatArray = (children): HTMLElement[] => Array.isArray(children) ? children.flat(Infinity) : [children];
+const toFlatArray = (children): (HTMLElement | string)[] => Array.isArray(children) ? children.flat(Infinity) : [children];
 
 const tag = <T>(tagName: string, config: AttrsClassesStyles = {}, children?: T): HTMLElement => {
     const el = document.createElement(tagName);
