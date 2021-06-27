@@ -1,6 +1,5 @@
-import { tag } from "./lib/tag";
+import { div, tag } from "./lib/tag";
 
-const div = (...args) => tag('div', ...args);
 const flexbox = (children) => div("display: flex;", children);
 const flexboxChild = (style?, children?) => div(style, children);
 
